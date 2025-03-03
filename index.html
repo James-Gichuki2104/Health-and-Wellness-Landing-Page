@@ -4,6 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Health and Wellness Landing Page</title>
+    <style>
+    body{
+    background-color:#d0f0c0;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    }
+    #health-wellness {
+    max-width:1000px;
+    margin:60px auto;
+    border-radius: 10px;
+
+} 
+nav ul{
+    float: right;
+    margin-right: 2em;
+  }
+  
+  nav li{
+    display: inline;
+    padding: 1em;
+    display: inline-block;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #355e3b;
+  }
+  .first {
+    box-shadow: 0px 30px 50px #d0d0d0;
+    width: 90%;
+    height: 90vh;
+    background: linear-gradient(to right, #FFFFFF, #6ABF4B);
+    
+    /* Centering the div */
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* Optional: To align content inside */
+    display: flex;
+    justify-content: left;
+    align-items:left;
+}
+  .About{
+    padding: 40px 0 0 50px
+}
+.headline{ 
+    margin-top:40px;
+    line-height: 1.3;
+    font-size: 48px;
+    font-weight:300;
+    color:#355e3b;
+    font-family: 'Noto Serif Display', serif;
+    text-transform: capitalize;
+}
+.Home{
+    font-family: 'Noto Serif Display', serif;
+    color:#916a2f;
+}
+.details{
+    color:#013220;
+    font-size: 16px;
+    
+    line-height: 24px;
+    font-weight: 300;
+}
+.home-img{
+    position:absolute;
+   top:10%;
+    left: 60%;
+    width:400px;
+    height: 400px;
+    border-radius: 50%;
+    border:5px solid #355e3b;
+}
+    </style>
 </head>
 <body>
     <div class="health-wellness">
@@ -11,7 +90,6 @@
             <nav id="nav-bar">
                 <ul>
                     <li> <a  href="#Home" class="nav-link">Home</a></li>
-                    <li> <a href="#About" class="nav-link" >About</a></li>
                     <li> <a  href="#Programs" class="nav-link" >Programs</a></li>
                     <li> <a  href="#Workshops" class="nav-link">Workshops</a></li>
                     <li> <a href="#Blog" class="nav-link" >Blog</a></li>
@@ -20,9 +98,16 @@
                   </ul>
             </nav>
         </header>
-        <section id="Home"> 
-
-
+        <section class="first" id="Home"> 
+    <div class="About">
+        <h1 class="headline">Nourish to Flourish: <span class="Home"><br/>Embracing Wellness <br/>Through Mindful Nutrition</span>.</h1>
+       <h2 class="details"> 
+        True wellness starts with daily choices. <br/>Nourish your body with balanced nutrition and mindful eating to thrive, <br/>prevent disease, and live vibrantly. <br/>Join us on the journey to better health—because when you nourish, you flourish!
+ </h2>
+    </div>
+<div>
+    <img class="home-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-rVx7whxN5dKRr0q34P2sQ3p62j6I2WZ2KQ&s"/>
+</div>
         </section>
     </div>
 </body>
