@@ -162,6 +162,50 @@ a {
   .offering .btn:hover {
     background-color: #6ABF4B;
   }
+
+  /* Styling for Healthy Meals and Products section */
+
+  .healthy-meals{
+    display: flex;
+    flex-wrap: nowrap; /* Keep items in one row */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+
+  .healthy-mealsh2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #2e7f11;
+    text-align: left;
+  }
+
+  .product {
+    flex: 0 0 auto; /* Prevent shrinking */
+    min-width: 250px; /* Increase size */
+    max-width: 300px; /* Increase size */
+    min-height: 200px; 
+    max-height: 300px;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+  }
+
+  .product h3 {
+    margin-top: 0;
+    font-size: 1.4em;
+    color: #6ABF4B;
+  }
   
   /* Footer */
   footer {
