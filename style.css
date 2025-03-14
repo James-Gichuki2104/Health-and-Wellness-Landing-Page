@@ -75,13 +75,25 @@ a {
 
 .home-img {
     position: absolute;
-    top: 10%;
-    left: 65%;
-    width: 400px;
-    height: 400px;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    width: 450px;
+    height: 450px;
     border-radius: 50%;
-    border: 5px solid #355e3b;
+    border: 8px solid #2f940b;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(47, 148, 11, 0.3),
+                0 15px 45px rgba(106, 191, 75, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.home-img:hover {
+    transform: translateY(-52%);
+    box-shadow: 0 15px 40px rgba(47, 148, 11, 0.4),
+                0 20px 50px rgba(106, 191, 75, 0.3);
+}
+
 
 /*Styling for get started button*/
 .getStarted {
@@ -1047,5 +1059,28 @@ footer {
 
     .package.featured {
         transform: scale(1);
+    }
+}
+.add-to-cart-message {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2f940b;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    animation: slideIn 0.3s ease-out;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
     }
 }
