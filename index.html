@@ -15,14 +15,13 @@
             <nav id="nav-bar">
                 <ul>
                     <li> <a href="#Home" class="nav-link">Home</a></li>
-                    <li> <a href="#about" class="nav-link">About</a></li>
-                    <!-- <li> <a href="#Workshops" class="nav-link">Workshops</a></li> -->
+                    <li> <a href="#about" class="nav-link">Programs</a></li>
+                    <li> <a href="#Workshops" class="nav-link">Workshops</a></li>
                     <li> <a href="#Blog" class="nav-link">Blog</a></li>
                     <li> <a href="#Testimonials" class="nav-link">Testimonials</a></li>
-                    <li> <a href="#Contact" class="nav-link">Contact</a></li>
+                    <li> <a href="#footer" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         </header>
 
         <!-- Hero Section -->
@@ -35,7 +34,9 @@
                     eating to thrive, <br />prevent disease, and live vibrantly. <br />Join us on the journey to better
                     health—because when you nourish, you flourish!
                 </h2>
-                <div class="getStarted"><a href="#">Get Started </a></div>
+                <div class="getStarted">
+                    <a href="signUp.html">Get Started <span class="arrow">→</span></a>
+                </div>
             </div>
             <div>
                 <img class="home-img"
@@ -46,59 +47,404 @@
 
     <!-- About Section -->
     <section id="about">
-        <h2 id="abouth2">About Us</h2>
+        <h2 id="abouth2">About us</h2>
+        <button class="nav-button prev" onclick="slideOfferings('prev')">←</button>
         <div class="offerings-box">
             <div class="offering">
+                <img src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=500&auto=format" alt="Healthy organic meals" class="offering-img">
                 <h3>Healthy Meals</h3>
-                <p>Nutritious and delicious meals for your well-being.</p>
-                <a href="healthy-meals" class="btn">Healthy Meals</a>
+                <p>Nutritious and delicious meals curated for your well-being.</p>
+                <a href="#Workshops" class="btn">Shop Healthy Foods</a>
             </div>
             <div class="offering">
-                <h3>Meal Planning</h3>
-                <p>A well developed meal planning tool that helps you get the right meals.</p>
-                <a href="meal-planning.html" class="btn">Meal Planning Tool</a>
+                <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=500&auto=format" alt="Personal coaching" class="offering-img">
+                <h3>Personalized Coaching</h3>
+                <p>Expert guidance tailored to your wellness journey.</p>
+                <a href="#wellness-coach" class="btn">Meet Your Coach</a>
             </div>
             <div class="offering">
+                <img src="https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?w=500&auto=format" alt="Success story" class="offering-img">
                 <h3>Success Stories</h3>
                 <p>Real stories of transformation from our community.</p>
                 <a href="#success-stories" class="btn">Success Stories</a>
             </div>
             <div class="offering">
+                <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=500&auto=format" alt="Nutritional insights" class="offering-img">
                 <h3>Nutritional Insights</h3>
                 <p>Latest research and tips to boost your nutrition.</p>
                 <a href="#nutritional-insights" class="btn">Nutritional Insights</a>
             </div>
             <div class="offering">
+                <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&auto=format" alt="Community gathering" class="offering-img">
                 <h3>Engaging Community</h3>
                 <p>Connect with others who share your passion for health.</p>
-                <a href="#engaging-community" class="btn">Engaging Communit</a>
+                <a href="#engaging-community" class="btn">Engaging Community</a>
             </div>
             <div class="offering">
+                <img src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?w=500&auto=format" alt="Subscribe" class="offering-img">
                 <h3>Subscribe</h3>
                 <p>Sign up for future updates and exclusive tips.</p>
-                <a href="#subscribe" class="btn">Subscribe</a>
+                <a href="signUp.html" class="btn">Subscribe Now</a>
+            </div>
+        </div>
+        <button class="nav-button next" onclick="slideOfferings('next')">→</button>
+    </section>
+
+    <!-- Workshops Section -->
+    <section id="Workshops" class="workshops-section">
+        <h2 class="workshop-title">African Wellness Market</h2>
+        <div class="workshop-content">
+            <div class="healthy-cart-section">
+                <h3>Wellness Shopping Guide</h3>
+                <div class="cart-items">
+                    <div class="cart-category product-card">
+                        <h4>Local Superfoods & Vegetables</h4>
+                        <div class="product-item">
+                            <img src="https://macefoods.com/wp-content/uploads/2023/05/new-SUKUMA-WIKI.png" alt="Organic Sukuma Wiki" class="product-img">
+                            <div class="product-details">
+                                <h5>Fresh Sukuma Wiki Bundle</h5>
+                                <p class="price">KSh 50/bunch</p>
+                                <span class="nutrition-info">Rich in iron & vitamins</span>
+                                <button class="add-cart-btn">🛒 Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://5.imimg.com/data5/SELLER/Default/2023/7/323208409/FU/VQ/KZ/192228407/organic-sweet-potato.jpeg" alt="Sweet Potatoes" class="product-img">
+                            <div class="product-details">
+                                <h5>Organic Sweet Potatoes</h5>
+                                <p class="price">KSh 200/kg</p>
+                                <span class="nutrition-info">High in vitamin A & fiber</span>
+                                <button class="add-cart-btn">🛒 Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://thefreshmarket.co.ke/wp-content/uploads/2020/05/Terere-amaranth.png" alt="African Spinach" class="product-img">
+                            <div class="product-details">
+                                <h5>Terere (African Spinach)</h5>
+                                <p class="price">KSh 80/bunch</p>
+                                <span class="nutrition-info">Packed with minerals</span>
+                                <button class="add-cart-btn">🛒 Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-category product-card">
+                        <h4>Traditional Supplements & Herbs</h4>
+                        <div class="product-item">
+                            <img src="https://hips.hearstapps.com/hmg-prod/images/nutritional-supplement-moringa-powder-on-rustic-royalty-free-image-1659133952.jpg" alt="Moringa Powder" class="product-img">
+                            <div class="product-details">
+                                <h5>Pure Moringa Powder</h5>
+                                <p class="price">KSh 850/pack</p>
+                                <span class="nutrition-info">100g, Superfood supplement</span>
+                                <button class="add-cart-btn">🛒 Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNuV_SRLSgeDvh9ga2HtmGt4mp8iCcbX_-mqWziQD1kdbO0hh4_Om9_82XGIt0nkKsXa4&usqp=CAU" alt="Baobab Powder" class="product-img">
+                            <div class="product-details">
+                                <h5>Baobab Powder</h5>
+                                <p class="price">KSh 750/pack</p>
+                                <span class="nutrition-info">Rich in vitamin C, 80g</span>
+                                <button class="add-cart-btn">🛒 Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgY8HO7RhmtL7h77RKKhzLl2ORPBT16qfmsnltg1vO2staMbynaDbl3D-obwdyjAHV4g00h7iT7EyFZiPyw6u2q4c40tR3kGp4wBOoxi-wcaBRKYyAkrHXyoeXqZ-njfSCBZQaQdSxN1aU/s640/t.jpg" alt="African Ginger" class="product-img">
+                            <div class="product-details">
+                                <h5>Tangawizi (Ginger) Root</h5>
+                                <p class="price">KSh 180/pack</p>
+                                <span class="nutrition-info">Fresh & organic, 250g</span>
+                                <button class="add-cart-btn">🛒 Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-category product-card">
+                        <h4>Traditional Grains & Proteins</h4>
+                        <div class="product-item">
+                            <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500&auto=format" alt="Finger Millet" class="product-img">
+                            <div class="product-details">
+                                <h5>Wimbi (Finger Millet)</h5>
+                                <p class="price">KSh 280/kg</p>
+                                <span class="nutrition-info">Rich in calcium & fiber</span>
+                                <button class="add-cart-btn">🛒 Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://tiimg.tistatic.com/fp/1/008/463/natural-organic-green-gram-pulses-666.jpg" alt="Green Grams" class="product-img">
+                            <div class="product-details">
+                                <h5>Organic Green Grams</h5>
+                                <p class="price">KSh 320/kg</p>
+                                <span class="nutrition-info">High protein legumes</span>
+                                <button class="add-cart-btn">🛒 Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYi0XlDeAPxnhkUueRpZDxtwEX_tMT4-iIZA&s" alt="Black Beans" class="product-img">
+                            <div class="product-details">
+                                <h5>Njahi (Black Beans)</h5>
+                                <p class="price">KSh 400/kg</p>
+                                <span class="nutrition-info">Rich in iron & protein</span>
+                                <button class="add-cart-btn">🛒 Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-category product-card">
+                        <h4>Traditional Beverages</h4>
+                        <div class="product-item">
+                            <img src="https://t4.ftcdn.net/jpg/09/87/23/13/360_F_987231380_jdL873SMp64EiQPT96c2pme1mtxsU0Bq.jpg" alt="Kenyan Tea" class="product-img">
+                            <div class="product-details">
+                                <h5>Premium Kenyan Tea</h5>
+                                <p class="price">KSh 280/pack</p>
+                                <span class="nutrition-info">100g loose leaf</span>
+                                <button class="add-cart-btn">🛒 Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://eu-images.contentstack.com/v3/assets/blt7b94604c32d7613d/bltfe1dc10e6e787a47/67040188f8caa75f81413eb9/Hibiscus-tea.png?width=1280&auto=webp&quality=95&format=jpg&disable=upscale" alt="Hibiscus Tea" class="product-img">
+                            <div class="product-details">
+                                <h5>Roselle (Hibiscus) Tea</h5>
+                                <p class="price">KSh 350/pack</p>
+                                <span class="nutrition-info">Natural & caffeine-free</span>
+                                <button class="add-cart-btn">🛒 Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://atfgreens.com/cdn/shop/products/lemongrass_300x300.jpg?v=1607673589" alt="Lemon Grass" class="product-img">
+                            <div class="product-details">
+                                <h5>Fresh Lemon Grass</h5>
+                                <p class="price">KSh 120/bunch</p>
+                                <span class="nutrition-info">For tea & cooking</span>
+                                <button class="add-cart-btn">🛒 Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-summary">
+                    <div class="cart-total">
+                        <span>Total:</span>
+                        <span class="total-amount">KSh 0.00</span>
+                    </div>
+                    <a href="signUp.html" class="workshop-cta">Start Shopping →</a>
+                </div>
             </div>
         </div>
     </section>
-    <br><br>
 
-    
-
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-left">
-                <p>&copy; 2025 Health and Wellness. All rights reserved.</p>
-            </div>
-            <div class="footer-right">
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#contact">Contact</a>
-                <a href="#subscribe">Subscribe</a>
+    <!-- Wellness Coach Section -->
+    <section id="wellness-coach" class="workshops-section">
+        <h2 class="workshop-title">Wellness Coach Services</h2>
+        <div class="workshop-content">
+            <div class="coach-section">
+                <div class="coach-image">
+                    <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&auto=format" alt="Wellness Coach" class="main-coach-img">
+                </div>
+                <div class="coach-details">
+                    <h3>Transform Your Life with Expert Guidance</h3>
+                    <div class="coach-packages">
+                        <div class="package">
+                            <h4>Basic Wellness Package</h4>
+                            <p class="price">KSh 5,000/month</p>
+                            <ul class="benefits">
+                                <li>Weekly one-on-one coaching sessions</li>
+                                <li>Personalized nutrition planning</li>
+                                <li>Basic workout routines</li>
+                                <li>Monthly progress tracking</li>
+                            </ul>
+                            <button class="coach-cta">Get Started</button>
+                        </div>
+                        <div class="package featured">
+                            <div class="featured-tag">Most Popular</div>
+                            <h4>Premium Wellness Journey</h4>
+                            <p class="price">KSh 12,000/month</p>
+                            <ul class="benefits">
+                                <li>2x weekly personal coaching sessions</li>
+                                <li>Advanced nutrition & meal planning</li>
+                                <li>Customized workout programs</li>
+                                <li>Weekly progress tracking</li>
+                                <li>24/7 WhatsApp support</li>
+                                <li>Monthly wellness workshops</li>
+                            </ul>
+                            <button class="coach-cta">Transform Now</button>
+                        </div>
+                        <div class="package">
+                            <h4>Family Wellness Plan</h4>
+                            <p class="price">KSh 20,000/month</p>
+                            <ul class="benefits">
+                                <li>Family nutrition planning</li>
+                                <li>Group coaching sessions</li>
+                                <li>Family workout routines</li>
+                                <li>Quarterly health assessments</li>
+                                <li>Priority support access</li>
+                            </ul>
+                            <button class="coach-cta">Join Together</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Shop by Category</h3>
+                <ul>
+                    <li><a href="#Workshops">Local Superfoods & Vegetables</a></li>
+                    <li><a href="#Workshops">Traditional Supplements & Herbs</a></li>
+                    <li><a href="#Workshops">Traditional Grains & Proteins</a></li>
+                    <li><a href="#Workshops">Traditional Beverages</a></li>
+                    <li><a href="#wellness-coach">Wellness Coaching Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-column social-media">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="#" class="social-link"><i class="fab fa-tiktok"></i> TikTok</a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i> YouTube</a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i> Twitter</a>
+                    <a href="#" class="social-link"><i class="fab fa-pinterest"></i> Pinterest</a>
+                </div>
+            </div>
+            <div class="footer-column mission">
+                <h3>Our Mission</h3>
+                <p>Empowering lives through traditional African wellness wisdom, we're committed to bringing nature's finest nutrients to your doorstep. Our journey is about reconnecting you with authentic, sustainable health solutions that have nourished generations.</p>
+                <div class="newsletter-signup">
+                    <h4>Subscribe to Our Newsletter</h4>
+                    <form class="subscribe-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="subscribe-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Health and Wellness. All rights reserved.</p>
+        </div>
     </footer>
+    <!-- Add Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        function slideOfferings(direction) {
+            const container = document.querySelector('.offerings-box');
+            const offerings = document.querySelectorAll('.offering');
+            const offeringsPerView = 2;
+            const totalOfferings = offerings.length;
+            let currentIndex = parseInt(container.dataset.currentIndex || '0');
+
+            if (direction === 'prev') {
+                currentIndex = Math.max(0, currentIndex - offeringsPerView);
+            } else {
+                currentIndex = Math.min(totalOfferings - offeringsPerView, currentIndex + offeringsPerView);
+            }
+
+            container.dataset.currentIndex = currentIndex;
+
+            // Hide all offerings first
+            offerings.forEach(offering => {
+                offering.style.display = 'none';
+            });
+
+            // Show only the current two offerings
+            for (let i = currentIndex; i < Math.min(currentIndex + offeringsPerView, totalOfferings); i++) {
+                offerings[i].style.display = 'flex';
+            }
+
+            // Update button states
+            const prevButton = document.querySelector('.nav-button.prev');
+            const nextButton = document.querySelector('.nav-button.next');
+            
+            prevButton.style.opacity = currentIndex === 0 ? '0.5' : '1';
+            nextButton.style.opacity = currentIndex >= totalOfferings - offeringsPerView ? '0.5' : '1';
+            
+            // Add smooth transition effect
+            container.style.transition = 'opacity 0.3s ease';
+            container.style.opacity = '0';
+            setTimeout(() => {
+                container.style.opacity = '1';
+            }, 50);
+        }
+
+        // Initialize offerings display
+        window.addEventListener('load', () => {
+            const container = document.querySelector('.offerings-box');
+            const offerings = document.querySelectorAll('.offering');
+            container.dataset.currentIndex = '0';
+            
+            // Initially hide all offerings except first two
+            offerings.forEach((offering, index) => {
+                offering.style.display = index < 2 ? 'flex' : 'none';
+            });
+            
+            // Set initial button states
+            document.querySelector('.nav-button.prev').style.opacity = '0.5';
+            document.querySelector('.nav-button.next').style.opacity = offerings.length > 2 ? '1' : '0.5';
+        });
+
+        // Cart functionality
+        let cartTotal = 0;
+        const totalElement = document.querySelector('.total-amount');
+
+        function formatKenyanPrice(amount) {
+            return `KSh ${amount.toLocaleString('en-KE', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+        }
+
+        function updateTotal() {
+            totalElement.textContent = formatKenyanPrice(cartTotal);
+        }
+
+        // Add click event listeners to product items
+        document.querySelectorAll('.product-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const priceText = item.querySelector('.price').textContent;
+                const price = parseFloat(priceText.replace('KSh ', ''));
+                cartTotal += price;
+                updateTotal();
+                
+                // Visual feedback
+                item.style.backgroundColor = 'rgba(106, 191, 75, 0.2)';
+                setTimeout(() => {
+                    item.style.backgroundColor = '';
+                }, 300);
+
+                // Show added to cart message
+                const productName = item.querySelector('h5').textContent;
+                const message = document.createElement('div');
+                message.className = 'add-to-cart-message';
+                message.textContent = `Added ${productName} to cart`;
+                document.body.appendChild(message);
+                
+                setTimeout(() => {
+                    message.remove();
+                }, 2000);
+            });
+        });
+    </script>
+    <style>
+        .add-to-cart-message {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #2f940b;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            animation: slideIn 0.3s ease-out;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
 </body>
 
 </html>
