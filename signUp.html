@@ -110,7 +110,7 @@
             <h1>Join Our Wellness Journey</h1>
             <p>Start your path to a healthier, more vibrant life today!</p>
         </div>
-        <form class="signup-form" action="#" method="POST">
+        <form class="signup-form" id="signupForm" onsubmit="handleSubmit(event)">
             <div class="form-group">
                 <label for="fullname">Full Name</label>
                 <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name">
@@ -121,21 +121,32 @@
             </div>
             <div class="form-group">
                 <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
             </div>
             <div class="form-group">
-                <label for="program">Interested Program</label>
+                <label for="program">Select Package</label>
                 <select id="program" name="program" required>
-                    <option value="">Select a program</option>
-                    <option value="healthy-meals">Healthy Meals</option>
-                    <option value="personal-coaching">Personal Coaching</option>
-                    <option value="nutrition-plan">Nutrition Plan</option>
-                    <option value="wellness-workshop">Wellness Workshop</option>
+                    <option value="">Choose a package...</option>
+                    <option value="basic">Basic Wellness Package</option>
+                    <option value="premium">Premium Wellness Journey</option>
+                    <option value="family">Family Wellness Plan</option>
                 </select>
             </div>
-            <button type="submit" class="submit-btn">Start Your Journey →</button>
+            <button type="submit" class="submit-btn">Start Your Journey</button>
         </form>
         <a href="index.html" class="back-link">← Back to Home</a>
     </div>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            // Show gratitude message
+            alert("Thank you for taking the first step towards your wellness journey! 🌟\n\nWe're grateful for the opportunity to be part of your transformation. Our team will reach out to you within 24 hours to begin your personalized wellness experience.\n\nWelcome to our wellness family! 💚");
+            
+            // Reset the form
+            event.target.reset();
+        }
+    </script>
 </body>
 </html>

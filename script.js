@@ -92,3 +92,34 @@ document.querySelectorAll('.product-item').forEach(item => {
         }, 2000);
     });
 });
+
+// Add form submission handlers
+document.addEventListener('DOMContentLoaded', function() {
+    // Signup form handler
+    const signupForm = document.querySelector('.signup-form');
+    if (signupForm) {
+        signupForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Show gratitude message
+            alert("Thank you for taking the first step towards your wellness journey! 🌟\n\nWe're grateful for the opportunity to be part of your transformation. Our team will reach out to you within 24 hours to begin your personalized wellness experience.\n\nWelcome to our wellness family! 💚");
+            
+            // Reset the form
+            signupForm.reset();
+        });
+    }
+
+    // Newsletter subscription form handler
+    const subscribeForm = document.querySelector('.subscribe-form');
+    if (subscribeForm) {
+        subscribeForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Show subscription confirmation message
+            alert("Thanks For Subscribing!");
+            
+            // Reset the form
+            subscribeForm.reset();
+        });
+    }
+});
