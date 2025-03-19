@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Wellness Plan - Health & Wellness</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .family-hero {
+            width: 90%;
+            height: 70vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1600&auto=format') center/cover;
+            margin: 20px auto;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 40px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            font-family: 'Noto Serif Display', serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .family-intro {
+            text-align: center;
+            padding: 60px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .family-intro h2 {
+            color: #355e3b;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .family-intro p {
+            color: #666;
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .family-benefits {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(106, 191, 75, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(106, 191, 75, 0.15);
+        }
+
+        .benefit-icon {
+            font-size: 2.5em;
+            color: #2f940b;
+        }
+
+        .benefit-content h3 {
+            color: #355e3b;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .benefit-content p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .wellness-quiz {
+            background: linear-gradient(135deg, #4a90e2 0%, #2f940b 100%);
+            padding: 60px 20px;
+            margin: 40px auto;
+            border-radius: 25px;
+            max-width: 1200px;
+            color: white;
+            text-align: center;
+        }
+
+        .wellness-quiz h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .wellness-quiz p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .start-quiz-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: white;
+            color: #2f940b;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.2em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .start-quiz-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .pricing-table {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(106, 191, 75, 0.1);
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        .pricing-table h2 {
+            text-align: center;
+            color: #355e3b;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .pricing-card {
+            background: #f8f8f8;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(106, 191, 75, 0.15);
+        }
+
+        .pricing-card h3 {
+            color: #355e3b;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 2em;
+            color: #2f940b;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px 0;
+        }
+
+        .features-list li {
+            color: #666;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .features-list li::before {
+            content: "✓";
+            color: #2f940b;
+            font-weight: bold;
+        }
+
+        .join-together-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #2f940b;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.2em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(47, 148, 11, 0.2);
+        }
+
+        .join-together-btn:hover {
+            background: #247808;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(47, 148, 11, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .family-hero {
+                height: 50vh;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5em;
+            }
+
+            .family-benefits {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .testimonials-section {
+            background: linear-gradient(135deg, #4a90e2 0%, #2f940b 100%);
+            padding: 60px 20px;
+            margin: 40px auto;
+            border-radius: 25px;
+            max-width: 1200px;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            color: white;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 120px;
+            color: rgba(255, 255, 255, 0.1);
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .testimonial-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .client-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #FFD700;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover .client-image {
+            transform: scale(1.05);
+            border-color: #ffffff;
+        }
+
+        .client-info h4 {
+            color: #ffffff;
+            margin-bottom: 5px;
+            font-size: 1.2em;
+        }
+
+        .client-info p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9em;
+        }
+
+        .testimonial-text {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .achievement-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 215, 0, 0.2);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            color: #FFD700;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <nav id="nav-bar">
+            <div class="logo">
+                <span class="logo-symbol">🌿</span>
+                <span class="logo-text">Health & Wellness</span>
+            </div>
+            <ul>
+                <li><a href="#family-hero" class="nav-link">Home</a></li>
+                <li><a href="#family-intro" class="nav-link">Benefits</a></li>
+                <li><a href="#pricing-table" class="nav-link">Programs</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="index.html#footer" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="family-hero" class="family-hero">
+        <div class="hero-content">
+            <h1>Healthy Living for the Whole Family!</h1>
+            <p>Create lasting healthy habits together with our comprehensive family wellness program.</p>
+        </div>
+    </section>
+
+    <section id="family-intro"class="family-intro">
+        <h2>Why Choose Our Family Wellness Plan?</h2>
+        <p>Our family-focused program helps everyone in your household build healthy habits together. With personalized nutrition plans, fun group activities, and expert guidance, we make wellness a family affair!</p>
+    </section>
+
+    <section class="family-benefits">
+        <div class="benefit-card">
+            <div class="benefit-icon">👨‍👩‍👧‍👦</div>
+            <div class="benefit-content">
+                <h3>Family Nutrition Planning</h3>
+                <p>Customized meal plans that work for everyone, including kid-friendly options and family favorites.</p>
+            </div>
+        </div>
+        <div class="benefit-card">
+            <div class="benefit-icon">🤝</div>
+            <div class="benefit-content">
+                <h3>Group Coaching Sessions</h3>
+                <p>Family-focused coaching to help everyone stay motivated and accountable together.</p>
+            </div>
+        </div>
+        <div class="benefit-card">
+            <div class="benefit-icon">🏋️‍♂️</div>
+            <div class="benefit-content">
+                <h3>Family Workout Routines</h3>
+                <p>Fun, age-appropriate exercises that the whole family can enjoy together.</p>
+            </div>
+        </div>
+        <div class="benefit-card">
+            <div class="benefit-icon">🏥</div>
+            <div class="benefit-content">
+                <h3>Quarterly Health Assessments</h3>
+                <p>Regular check-ins to track your family's progress and adjust plans as needed.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="wellness-quiz">
+        <h2>Find Your Perfect Family Plan</h2>
+        <p>Take our quick wellness quiz to discover the best program for your family's needs and goals.</p>
+        <a href="#" class="start-quiz-btn">Start Wellness Quiz</a>
+    </section>
+
+    <section id="pricing-table" class="pricing-table">
+        <h2>Choose Your Family Plan</h2>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Basic Family</h3>
+                <div class="price">KSh 15,000</div>
+                <ul class="features-list">
+                    <li>Family Nutrition Planning</li>
+                    <li>Monthly Group Coaching</li>
+                    <li>Basic Workout Routines</li>
+                    <li>Quarterly Assessments</li>
+                </ul>
+                <a href="signUp.html?package=family_basic" class="join-together-btn">Get Started</a>
+            </div>
+            <div class="pricing-card">
+                <h3>Premium Family</h3>
+                <div class="price">KSh 25,000</div>
+                <ul class="features-list">
+                    <li>Advanced Nutrition Planning</li>
+                    <li>Weekly Group Coaching</li>
+                    <li>Custom Workout Programs</li>
+                    <li>Monthly Assessments</li>
+                    <li>24/7 Support Access</li>
+                </ul>
+                <a href="signUp.html?package=family_premium" class="join-together-btn">Get Started</a>
+            </div>
+            <div class="pricing-card">
+                <h3>Elite Family</h3>
+                <div class="price">KSh 35,000</div>
+                <ul class="features-list">
+                    <li>Premium Nutrition Planning</li>
+                    <li>Unlimited Group Coaching</li>
+                    <li>Personalized Programs</li>
+                    <li>Weekly Assessments</li>
+                    <li>Priority Support</li>
+                    <li>Family Wellness Retreat</li>
+                </ul>
+                <a href="signUp.html?package=family_elite" class="join-together-btn">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials-section">
+        <h2>Success Stories</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <span class="achievement-badge">Family Wellness Champion</span>
+                <p class="testimonial-text">"The Family Wellness Plan has been a game-changer for us. Our children have learned about healthy eating, and we enjoy working out together. It's amazing to see the positive changes in everyone's health and happiness!"</p>
+                <div class="testimonial-content">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5XDoiSoUiT6_LrjgZ31V9baYFLc3dkNiWv20lAR1IsCbKx0lJlA9yxtU8i-m4zl_efqo&usqp=CAU" alt="Sharon Biwott" class="client-image">
+                    <div class="client-info">
+                        <h4>Sharon Biwott</h4>
+                        <p>Family Wellness Plan Member</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <span class="achievement-badge">Health Transformation</span>
+                <p class="testimonial-text">"The personalized coaching and family meal plans have helped us create lasting healthy habits. Our entire family feels more energetic and connected!"</p>
+                <div class="testimonial-content">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&auto=format" alt="James Gichuki" class="client-image">
+                    <div class="client-info">
+                        <h4>James Gichuki</h4>
+                        <p>Family Wellness Plan Member</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#family-intro" class="nav-link">Benefits</a></li>
+                    <li><a href="#pricing-table" class="nav-link">Programs</a></li>
+                    <li><a href="#testimonials">Success Stories</a></li>
+                </ul>
+            </div>
+            <div class="footer-column social-media">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="https://www.pinterest.com/wholeb0dywellness/" target="_blank" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="https://www.pinterest.com/wholeb0dywellness/" target="_blank" class="social-link"><i class="fab fa-facebook"></i> Facebook</a>
+                    <a href="https://www.pinterest.com/wholeb0dywellness/" target="_blank" class="social-link"><i class="fab fa-twitter"></i> Twitter</a>
+                </div>
+            </div>
+            <div class="footer-column mission">
+                <h3>Our Mission</h3>
+                <p>Empowering families through personalized wellness solutions, we're committed to helping you create a healthier, happier home together.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Health and Wellness. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="script.js"></script>
+</body>
+</html> 

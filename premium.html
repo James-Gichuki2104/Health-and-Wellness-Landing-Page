@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Wellness Journey - Health & Wellness</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .premium-hero {
+            width: 90%;
+            height: 70vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1600&auto=format') center/cover;
+            margin: 20px auto;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 40px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            font-family: 'Noto Serif Display', serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .premium-features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 40px auto;
+            background: linear-gradient(135deg, #4a90e2 0%, #2f940b 100%);
+            border-radius: 25px;
+        }
+
+        .premium-feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            color: white;
+        }
+
+        .premium-feature::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #FFD700, #ffffff);
+        }
+
+        .premium-feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .premium-icon {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .premium-feature h3 {
+            color: #ffffff;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+
+        .premium-feature p {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.5;
+        }
+
+        .testimonials-section {
+            background: linear-gradient(to right, #FFFFFF, #6ABF4B);
+            padding: 60px 20px;
+            margin: 40px auto;
+            border-radius: 25px;
+            max-width: 1200px;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .client-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #2f940b;
+            box-shadow: 0 2px 8px rgba(47, 148, 11, 0.2);
+        }
+
+        .client-info h4 {
+            color: #355e3b;
+            margin-bottom: 5px;
+        }
+
+        .client-info p {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .premium-cta {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #2c3e50 0%, #27ae60 100%);
+            margin: 40px auto;
+            border-radius: 25px;
+            max-width: 1200px;
+            color: white;
+        }
+
+        .premium-cta h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .premium-cta p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .transform-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #FFD700;
+            color: #2c3e50;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.2em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .transform-btn:hover {
+            background: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .premium-hero {
+                height: 50vh;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5em;
+            }
+
+            .premium-features {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <nav id="nav-bar">
+            <div class="logo">
+                <span class="logo-symbol">🌿</span>
+                <span class="logo-text">Health & Wellness</span>
+            </div>
+            <ul>
+                <li><a href="#premium-hero" class="nav-link">Home</a></li>
+                <li><a href="#premium-features" class="nav-link">Programs</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="index.html#footer" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="premium-hero" class="premium-hero">
+        <div class="hero-content">
+            <h1>Your Personalized Path to Total Wellness!</h1>
+            <p>Experience the ultimate wellness journey with exclusive coaching, advanced nutrition planning, and premium support.</p>
+        </div>
+    </section>
+
+    <section id="premium-features" class="premium-features">
+        <div class="premium-feature">
+            <div class="premium-icon">🔥</div>
+            <h3>2x Weekly Personal Coaching</h3>
+            <p>Intensive coaching sessions to accelerate your progress and achieve your goals faster.</p>
+        </div>
+        <div class="premium-feature">
+            <div class="premium-icon">🍎</div>
+            <h3>Advanced Nutrition Planning</h3>
+            <p>Customized meal plans and nutrition strategies for optimal performance and results.</p>
+        </div>
+        <div class="premium-feature">
+            <div class="premium-icon">🏋️</div>
+            <h3>Customized Workout Programs</h3>
+            <p>Tailored exercise routines designed to maximize your fitness potential.</p>
+        </div>
+        <div class="premium-feature">
+            <div class="premium-icon">📈</div>
+            <h3>Weekly Progress Tracking</h3>
+            <p>Regular assessments and adjustments to keep you on track to success.</p>
+        </div>
+        <div class="premium-feature">
+            <div class="premium-icon">📱</div>
+            <h3>24/7 WhatsApp Support</h3>
+            <p>Instant access to your coach for guidance and motivation anytime.</p>
+        </div>
+        <div class="premium-feature">
+            <div class="premium-icon">🎤</div>
+            <h3>Monthly Wellness Workshops</h3>
+            <p>Exclusive access to expert-led workshops on various wellness topics.</p>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials-section">
+        <h2>Success Stories</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p>"The Premium Wellness Journey transformed my life! The personalized attention and comprehensive support made all the difference."</p>
+                <div class="testimonial-content">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfqr2HuT3emnwrEsg9y1n5mvF8IsdSGcGkvbMf64QxLOc9WvQRj_WiyZVDOeVMCDO4D44&usqp=CAU" alt="Sarah" class="client-image">
+                    <div class="client-info">
+                        <h4>Sarah Kamau</h4>
+                        <p>Lost 15kg in 6 months</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>"The 24/7 support and advanced nutrition planning helped me achieve results I never thought possible!"</p>
+                <div class="testimonial-content">
+                    <img src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?w=150&auto=format" alt="James" class="client-image">
+                    <div class="client-info">
+                        <h4>Gilbert Too</h4>
+                        <p>Gained 5kg lean muscle</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="premium-cta">
+        <h2>Ready for Total Transformation?</h2>
+        <p>Join our premium members who have achieved extraordinary results with personalized guidance and support.</p>
+        <a href="signUp.html?package=premium" class="transform-btn">Transform Now</a>
+    </section>
+
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#testimonials">Success Stories</a></li>
+                </ul>
+            </div>
+            <div class="footer-column social-media">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="https://www.pinterest.com/wholeb0dywellness/" target="_blank" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="https://www.pinterest.com/wholeb0dywellness/" target="_blank" class="social-link"><i class="fab fa-facebook"></i> Facebook</a>
+                    <a href="https://www.pinterest.com/wholeb0dywellness/" target="_blank" class="social-link"><i class="fab fa-twitter"></i> Twitter</a>
+                </div>
+            </div>
+            <div class="footer-column mission">
+                <h3>Our Mission</h3>
+                <p>Empowering lives through personalized wellness solutions, we're committed to helping you achieve your health and fitness goals.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Health and Wellness. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="script.js"></script>
+</body>
+</html>

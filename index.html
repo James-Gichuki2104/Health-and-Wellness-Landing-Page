@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Health and Wellness</title>
+</head>
+
+<body>
+    <!-- Class health-wellness to be used to style homepage/ hero section -->
+    <div class="health-wellness">
+        <header id="header">
+            <nav id="nav-bar">
+                <div class="logo">
+                    <span class="logo-symbol">🌿</span>
+                    <span class="logo-text">Health & Wellness</span>
+                </div>
+                <ul>
+                    <li> <a href="#Home" class="nav-link">Home</a></li>
+                    <li> <a href="#about" class="nav-link">Programs</a></li>
+                    <li> <a href="#Workshops" class="nav-link">Workshops</a></li>
+                    <li> <a href="#testimonials" class="nav-link">Testimonials</a></li>
+                    <li> <a href="#nutritional-insights" class="nav-link">Nutrion Hub</a></li>
+                    <li> <a href="#footer" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="first" id="Home">
+            <div class="About">
+                <h1 class="headline">Nourish to Flourish: <span class="Home"><br />Embracing Wellness <br />Through
+                        Mindful Nutrition</span>.</h1>
+                <h2 class="details">
+                    True wellness starts with daily choices. <br />Nourish your body with balanced nutrition and mindful
+                    eating to thrive, <br />prevent disease, and live vibrantly. <br />Join us on the journey to better
+                    health—because when you nourish, you flourish!
+                </h2>
+                <div class="getStarted">
+                    <a href="signUp.html">Get Started <span class="arrow">→</span></a>
+                </div>
+            </div>
+            <div>
+                <img class="home-img"
+                    src="https://cdn.create.vista.com/api/media/small/451563148/stock-photo-smiling-woman-pouring-smoothie-fresh-fruits-kitchen-table">
+        </section>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 id="abouth2">About us</h2>
+        <button class="nav-button prev" onclick="slideOfferings('prev')">←</button>
+        <div class="offerings-box">
+            <div class="offering">
+                <img src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=500&auto=format" alt="Healthy organic meals" class="offering-img">
+                <h3>Healthy Meals</h3>
+                <p>Nutritious and delicious meals curated for your well-being. Discover locally-sourced organic ingredients, traditional African superfoods, and balanced meal plans designed by expert nutritionists.</p>
+                <a href="#Workshops" class="btn">Shop Healthy Foods</a>
+            </div>
+            <div class="offering">
+                <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=500&auto=format" alt="Personal coaching" class="offering-img">
+                <h3>Personalized Coaching & Meal Plans</h3>
+                <p> Your body is unique, and so should be your nutrition. <br/> With personalized coaching and meal plans, you'll get expert guidance tailored to your lifestyle, goals, and nutritional needs.<p>
+                <a href="#wellness-articles" class="btn">Get Personalized Coaching</a>
+            </div>
+            <div class="offering">
+                <img src="https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?w=500&auto=format" alt="Success story" class="offering-img">
+                <h3>Success Stories</h3>
+                <p>Real stories of transformation from our community. Be inspired by incredible journeys of weight loss, muscle gain, and improved health through our holistic wellness programs.</p>
+                <a href="#testimonials" class="btn">Success Stories</a>
+            </div>
+            <div class="offering">
+                <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=500&auto=format" alt="Nutritional insights" class="offering-img">
+                <h3>Nutritional Insights</h3>
+                <p>Latest research and tips to boost your nutrition. Learn about African superfoods, traditional herbs, modern nutrition science, and evidence-based wellness practices.</p>
+                <a href="#nutritional-insights" class="btn">Nutritional Insights</a>
+            </div>
+            <div class="offering">
+                <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&auto=format" alt="Community gathering" class="offering-img">
+                <h3>Engaging Community</h3>
+                <p>Connect with others who share your passion for health. Join our vibrant community of wellness enthusiasts, share experiences, and participate in group challenges and workshops.</p>
+                <a href="signUp.html" class="btn">Join Community</a>
+            </div>
+            <div class="offering">
+                <img src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?w=500&auto=format" alt="Subscribe" class="offering-img">
+                <h3>Subscribe</h3>
+                <p>Stay updated with exclusive wellness tips, recipes, and special offers. Get weekly newsletters packed with nutrition advice, workout tips, and success stories from our community.</p>
+                <a href="signUp.html" class="btn">Subscribe Now</a>
+            </div>
+        </div>
+        <button class="nav-button next" onclick="slideOfferings('next')">→</button>
+    </section>
+
+    <!-- Workshops Section -->
+    <section id="Workshops" class="workshops-section">
+        <h2 class="workshop-title">African Wellness Market</h2>
+        <div class="workshop-content">
+            <div class="healthy-cart-section">
+                <h3>Wellness Shopping Guide</h3>
+                <div class="cart-items">
+                    <div class="cart-category product-card">
+                        <h4>Local Superfoods & Vegetables</h4>
+                        <div class="product-item">
+                            <img src="https://macefoods.com/wp-content/uploads/2023/05/new-SUKUMA-WIKI.png" alt="Organic Sukuma Wiki" class="product-img">
+                            <div class="product-details">
+                                <h5>Fresh Sukuma Wiki Bundle</h5>
+                                <p class="price">KSh 50/bunch</p>
+                                <span class="nutrition-info">Rich in iron & vitamins</span>
+                                <button class="add-cart-btn">🛒 Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://5.imimg.com/data5/SELLER/Default/2023/7/323208409/FU/VQ/KZ/192228407/organic-sweet-potato.jpeg" alt="Sweet Potatoes" class="product-img">
+                            <div class="product-details">
+                                <h5>Organic Sweet Potatoes</h5>
+                                <p class="price">KSh 200/kg</p>
+                                <span class="nutrition-info">High in vitamin A & fiber</span>
+                                <button class="add-cart-btn">🛒 Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://thefreshmarket.co.ke/wp-content/uploads/2020/05/Terere-amaranth.png" alt="African Spinach" class="product-img">
+                            <div class="product-details">
+                                <h5>Terere (African Spinach)</h5>
+                                <p class="price">KSh 80/bunch</p>
+                                <span class="nutrition-info">Packed with minerals</span>
+                                <button class="add-cart-btn">🛒 Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-category product-card">
+                        <h4>Traditional Supplements & Herbs</h4>
+                        <div class="product-item">
+                            <img src="https://hips.hearstapps.com/hmg-prod/images/nutritional-supplement-moringa-powder-on-rustic-royalty-free-image-1659133952.jpg" alt="Moringa Powder" class="product-img">
+                            <div class="product-details">
+                                <h5>Pure Moringa Powder</h5>
+                                <p class="price">KSh 850/pack</p>
+                                <span class="nutrition-info">100g, Superfood supplement</span>
+                                <button class="add-cart-btn">🛒 Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNuV_SRLSgeDvh9ga2HtmGt4mp8iCcbX_-mqWziQD1kdbO0hh4_Om9_82XGIt0nkKsXa4&usqp=CAU" alt="Baobab Powder" class="product-img">
+                            <div class="product-details">
+                                <h5>Baobab Powder</h5>
+                                <p class="price">KSh 750/pack</p>
+                                <span class="nutrition-info">Rich in vitamin C, 80g</span>
+                                <button class="add-cart-btn">🛒 Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgY8HO7RhmtL7h77RKKhzLl2ORPBT16qfmsnltg1vO2staMbynaDbl3D-obwdyjAHV4g00h7iT7EyFZiPyw6u2q4c40tR3kGp4wBOoxi-wcaBRKYyAkrHXyoeXqZ-njfSCBZQaQdSxN1aU/s640/t.jpg" alt="African Ginger" class="product-img">
+                            <div class="product-details">
+                                <h5>Tangawizi (Ginger) Root</h5>
+                                <p class="price">KSh 180/pack</p>
+                                <span class="nutrition-info">Fresh & organic, 250g</span>
+                                <button class="add-cart-btn">🛒 Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-category product-card">
+                        <h4>Traditional Grains & Proteins</h4>
+                        <div class="product-item">
+                            <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500&auto=format" alt="Finger Millet" class="product-img">
+                            <div class="product-details">
+                                <h5>Wimbi (Finger Millet)</h5>
+                                <p class="price">KSh 280/kg</p>
+                                <span class="nutrition-info">Rich in calcium & fiber</span>
+                                <button class="add-cart-btn">🛒 Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://tiimg.tistatic.com/fp/1/008/463/natural-organic-green-gram-pulses-666.jpg" alt="Green Grams" class="product-img">
+                            <div class="product-details">
+                                <h5>Organic Green Grams</h5>
+                                <p class="price">KSh 320/kg</p>
+                                <span class="nutrition-info">High protein legumes</span>
+                                <button class="add-cart-btn">🛒 Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYi0XlDeAPxnhkUueRpZDxtwEX_tMT4-iIZA&s" alt="Black Beans" class="product-img">
+                            <div class="product-details">
+                                <h5>Njahi (Black Beans)</h5>
+                                <p class="price">KSh 400/kg</p>
+                                <span class="nutrition-info">Rich in iron & protein</span>
+                                <button class="add-cart-btn">🛒 Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-category product-card">
+                        <h4>Traditional Beverages</h4>
+                        <div class="product-item">
+                            <img src="https://t4.ftcdn.net/jpg/09/87/23/13/360_F_987231380_jdL873SMp64EiQPT96c2pme1mtxsU0Bq.jpg" alt="Kenyan Tea" class="product-img">
+                            <div class="product-details">
+                                <h5>Premium Kenyan Tea</h5>
+                                <p class="price">KSh 280/pack</p>
+                                <span class="nutrition-info">100g loose leaf</span>
+                                <button class="add-cart-btn">🛒 Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://eu-images.contentstack.com/v3/assets/blt7b94604c32d7613d/bltfe1dc10e6e787a47/67040188f8caa75f81413eb9/Hibiscus-tea.png?width=1280&auto=webp&quality=95&format=jpg&disable=upscale" alt="Hibiscus Tea" class="product-img">
+                            <div class="product-details">
+                                <h5>Roselle (Hibiscus) Tea</h5>
+                                <p class="price">KSh 350/pack</p>
+                                <span class="nutrition-info">Natural & caffeine-free</span>
+                                <button class="add-cart-btn">🛒 Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://atfgreens.com/cdn/shop/products/lemongrass_300x300.jpg?v=1607673589" alt="Lemon Grass" class="product-img">
+                            <div class="product-details">
+                                <h5>Fresh Lemon Grass</h5>
+                                <p class="price">KSh 120/bunch</p>
+                                <span class="nutrition-info">For tea & cooking</span>
+                                <button class="add-cart-btn">🛒 Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-summary">
+                    <div class="cart-total">
+                        <span>Total:</span>
+                        <span class="total-amount">KSh 0.00</span>
+                    </div>
+                    <a href="signUp.html" class="workshop-cta">Start Shopping →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wellness Program Articles Section -->
+    <section id="wellness-articles" class="articles-section">
+        <h2 class="section-title">Wellness Coach Services</h2>
+        <div class="articles-container">
+            <!-- Basic Package Article -->
+            <article class="wellness-article basic">
+                <div class="article-header">
+                    <h3>Basic Wellness Package </h3>
+                    <div class="package-price">KSh 5,000/month</div>
+                </div>
+                <div class="article-content">
+                    <p class="welcome-message">Welcome to your Basic Wellness Package—the perfect foundation for your transformation! With personalized coaching, nutrition guidance, and structured workout routines, you're setting the stage for a stronger, healthier, and more vibrant you.</p>
+                    
+                    <div class="benefits-section">
+                        <h4>🌟 What You Get:</h4>
+                        <ul class="benefits-list">
+                            <li>Weekly one-on-one coaching tailored to your lifestyle</li>
+                            <li>A personalized meal plan designed for balanced nutrition</li>
+                            <li>Basic but effective workout routines for strength & endurance</li>
+                            <li>Monthly progress tracking to monitor and celebrate your success</li>
+                        </ul>
+                    </div>
+
+                    <div class="cta-section">
+                        <p class="cta-message">💬 Ready to take control of your health? Your transformation starts here!</p>
+                        <a href="signUp.html?package=basic" class="article-cta">Continue to Your Personalized Plan</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Premium Package Article -->
+            <article class="wellness-article premium">
+                <div class="article-header">
+                    <h3>Premium Wellness Journey</h3>
+                    <div class="package-price">KSh 12,000/month</div>
+                </div>
+                <div class="article-content">
+                    <p class="welcome-message">You've chosen the Premium Wellness Journey—a complete roadmap to a healthier, stronger, and more confident YOU. With personalized coaching, expert meal planning, and full-body workouts, you'll experience real, lasting transformation.</p>
+                    
+                    <div class="benefits-section">
+                        <h4>🌟 Your Exclusive Benefits:</h4>
+                        <ul class="benefits-list">
+                            <li>2x Weekly Personal Coaching for deeper guidance</li>
+                            <li>Advanced meal planning designed for peak performance & energy</li>
+                            <li>Customized workout programs to meet your fitness goals</li>
+                            <li>Weekly progress tracking to keep you on track</li>
+                            <li>24/7 WhatsApp support for motivation & assistance</li>
+                            <li>Exclusive monthly wellness workshops led by experts</li>
+                        </ul>
+                    </div>
+
+                    <div class="cta-section">
+                        <p class="cta-message">💪 You're one step away from real transformation!</p>
+                        <a href="signUp.html?package=premium" class="article-cta">Access Your Premium Plan</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Family Package Article -->
+            <article class="wellness-article family">
+                <div class="article-header">
+                    <h3>Family Wellness Plan</h3>
+                    <div class="package-price">KSh 20,000/month</div>
+                </div>
+                <div class="article-content">
+                    <p class="welcome-message">Good health starts at home! The Family Wellness Plan is designed for families looking to build healthy habits together. Whether it's better nutrition, active living, or expert guidance, this package ensures that everyone thrives.</p>
+                    
+                    <div class="benefits-section">
+                        <h4>🌟 What Your Family Gets:</h4>
+                        <ul class="benefits-list">
+                            <li>Family meal plans designed for all ages</li>
+                            <li>Group coaching sessions for motivation & accountability</li>
+                            <li>Fun family workout routines to stay active together</li>
+                            <li>Quarterly health assessments to track your family's progress</li>
+                            <li>Priority support access for expert help anytime</li>
+                        </ul>
+                    </div>
+
+                    <div class="cta-section">
+                        <p class="cta-message">🏡 Together, let's create a happy, healthier future for your family!</p>
+                        <a href="signUp.html?package=family" class="article-cta">Start Your Family Wellness Journey</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Nutritional Insights Section -->
+    <section id="nutritional-insights" class="nutritional-insights">
+        <!-- Hero Banner -->
+        <div class="nutrition-hero">
+            <div class="hero-content">
+                <h2>Unlock the Power of Nutrition: Science-Backed Wellness Tips</h2>
+                <p>Explore African superfoods, ancient healing herbs, and modern nutrition science to fuel your body and mind.</p>
+            </div>
+        </div>
+
+        <!-- Featured Topics Grid -->
+        <div class="topics-grid">
+            <div class="topic-card">
+                <div class="topic-icon">🌱</div>
+                <img src="https://images.unsplash.com/photo-1598009503747-f34d53b7df16?w=800&auto=format" alt="African Superfoods" class="topic-img">
+                <h3>African Superfoods</h3>
+                <p>Discover nutrient-packed foods like moringa, baobab, and teff that have nourished generations.</p>
+                <ul class="topic-list">
+                    <li>Moringa: Rich in vitamins and minerals</li>
+                    <li>Baobab: High in vitamin C and fiber</li>
+                    <li>Teff: Complete protein source</li>
+                </ul>
+            </div>
+
+            <div class="topic-card">
+                <div class="topic-icon">🌿</div>
+                <img src="https://images.unsplash.com/photo-1598009503747-f34d53b7df16?w=800&auto=format" alt="Traditional Healing Herbs" class="topic-img">
+                <h3>Traditional Healing Herbs</h3>
+                <p>Explore the health benefits of hibiscus, ginger, and turmeric for natural wellness.</p>
+                <ul class="topic-list">
+                    <li>Hibiscus: Natural antioxidant properties</li>
+                    <li>Ginger: Anti-inflammatory benefits</li>
+                    <li>Turmeric: Immune system support</li>
+                </ul>
+            </div>
+
+            <div class="topic-card">
+                <div class="topic-icon">🧪</div>
+                <img src="https://images.unsplash.com/photo-1598009503747-f34d53b7df16?w=800&auto=format" alt="Science & Nutrition" class="topic-img">
+                <h3>Science & Nutrition</h3>
+                <p>Learn about the latest research on gut health, metabolism, and balanced eating.</p>
+                <ul class="topic-list">
+                    <li>Gut health optimization</li>
+                    <li>Metabolic health insights</li>
+                    <li>Balanced nutrition principles</li>
+                </ul>
+            </div>
+
+            <div class="topic-card">
+                <div class="topic-icon">🍽️</div>
+                <img src="https://images.unsplash.com/photo-1598009503747-f34d53b7df16?w=800&auto=format" alt="Smart Eating Tips" class="topic-img">
+                <h3>Smart Eating Tips</h3>
+                <p>Practical ways to incorporate these foods into your daily meals for optimal health.</p>
+                <ul class="topic-list">
+                    <li>Meal planning strategies</li>
+                    <li>Portion control tips</li>
+                    <li>Healthy cooking methods</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Expert Advice & Wellness Blog -->
+        <div class="wellness-blog">
+            <h2>Latest Wellness Insights</h2>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1598009503747-f34d53b7df16?w=800&auto=format" alt="Weight Management" class="blog-img">
+                    <div class="blog-content">
+                        <h3>Understanding Weight Management</h3>
+                        <p>Learn about sustainable approaches to maintaining a healthy weight through balanced nutrition and lifestyle changes.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1598009503747-f34d53b7df16?w=800&auto=format" alt="Gut Health" class="blog-img">
+                    <div class="blog-content">
+                        <h3>Gut Health: The Foundation of Wellness</h3>
+                        <p>Discover how your gut health impacts overall well-being and learn ways to support a healthy digestive system.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1598009503747-f34d53b7df16?w=800&auto=format" alt="Disease Prevention" class="blog-img">
+                    <div class="blog-content">
+                        <h3>Nutrition for Disease Prevention</h3>
+                        <p>Explore how proper nutrition can help prevent chronic diseases and support long-term health.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- Interactive Quiz Section -->
+        <div class="quiz-section">
+            <h2>Find Your Superfood Match!</h2>
+            <p>Take our quick quiz to discover which African superfoods best match your health goals and lifestyle.</p>
+            <button class="start-quiz-btn">Start Quiz</button>
+        </div>
+
+        <!-- Newsletter Subscription -->
+        <div class="nutrition-newsletter">
+            <div class="newsletter-content">
+                <h2>Stay Updated with Nutrition Tips</h2>
+                <p>Subscribe to our weekly newsletter for the latest nutrition insights, recipes, and wellness tips.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="subscribe-btn">Subscribe for Nutrition Insights</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <h2>Success Stories & Transformations</h2>
+        <div class="testimonial-list">
+            <div class="testimonial-card">
+                <div class="testimonial-images">
+                    <div class="before-after">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsXrsME6GAqIo3k6PmQ4XncmjwM4HCzPrl96ON-1mbapUSzfXN7k7rzWqvECDjjQ4jKWU&usqp=CAU" alt="Before transformation" class="before-img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8Ee6Rfjfe97KfxeeOFaNbp7GI-Al1xWjBpQ&s" alt="After transformation" class="after-img">
+                        <span class="transformation-label">6 Months Transformation</span>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    <div class="star-rating">★★★★★  <span class="rating-number">5.0</span></div>
+                    <h3>Lost 15kg & Found My Confidence!</h3>
+                    <p class="achievement">Lost 15kg in 6 months through mindful eating</p>
+                    <p class="testimonial-text">"The wellness program completely transformed my life! Not only did I achieve my weight loss goals, but I also learned sustainable healthy habits that I'll carry forward. The coaches were incredibly supportive throughout my journey."</p>
+                    <div class="client-info">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfqr2HuT3emnwrEsg9y1n5mvF8IsdSGcGkvbMf64QxLOc9WvQRj_WiyZVDOeVMCDO4D44&usqp=CAU" alt="Sarah Kamau" class="client-img">
+                        <div>
+                            <h4>Sarah Kamau</h4>
+                            <p>Premium Wellness Journey Member</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-images">
+                    <div class="before-after">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk8MuVNisUmCxfAU4eOYzZLUnsD-xpDpBBrY1RPKFv66VaUXTIuQW335AKVq07lTU2fI0&usqp=CAU" alt="Before transformation" class="before-img">
+                        <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=500&auto=format" alt="After transformation" class="after-img">
+                        <span class="transformation-label">3 Months Transformation</span>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    <div class="star-rating">★★★★★  <span class="rating-number">4.5</span></div>
+                    <h3>Gained Muscle & Energy!</h3>
+                    <p class="achievement">Gained 5kg lean muscle & boosted energy levels</p>
+                    <p class="testimonial-text">"The personalized nutrition plan and workout routines were exactly what I needed. I've not only gained strength but also learned the importance of proper nutrition. My energy levels are through the roof!"</p>
+                    <div class="client-info">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&auto=format" alt="James Gichuki" class="client-img">
+                        <div>
+                            <h4>James Gichuki</h4>
+                            <p>Basic Wellness Package Member</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-images">
+                    <div class="before-after">
+                        <img src="https://media.istockphoto.com/id/2032134594/photo/black-family-restaurant-and-eating-with-mom-and-child-together-with-bonding-food-and-care.jpg?s=612x612&w=0&k=20&c=ZtdvIkYEiP7smaymU0BdmdT2lHd2iVsVNxvF2lddXYU=" alt="Family eating junk food" class="before-img">
+                        <img src="https://thumbs.dreamstime.com/b/multi-generation-family-having-meal-together-dining-table-home-portrait-african-american-sitting-looking-to-140577533.jpg" alt="After transformation" class="after-img">
+                        <span class="transformation-label">4 Months Transformation</span>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    <div class="star-rating">★★★★★ <span class="rating-number">5.0</span></div>
+                    <h3>Family Health Revolution!</h3>
+                    <p class="achievement">Entire family adopted healthy lifestyle</p>
+                    <p class="testimonial-text">"The Family Wellness Plan has been a game-changer for us. Our children have learned about healthy eating, and we enjoy working out together. It's amazing to see the positive changes in everyone's health and happiness!"</p>
+                    <div class="client-info">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5XDoiSoUiT6_LrjgZ31V9baYFLc3dkNiWv20lAR1IsCbKx0lJlA9yxtU8i-m4zl_efqo&usqp=CAU" alt="Sharon Biwott" class="client-img">
+                        <div>
+                            <h4>Sharon Biwott</h4>
+                            <p>Family Wellness Plan Member</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-images">
+                    <div class="before-after">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuaLskiSarGwFu_6mnGqAv3pdRRrbdGJGy_KvtjXycCnJEo9uyyO0iY5MPiFDoZrUl-lY&usqp=CAU" alt="Before transformation" class="before-img">
+                        <img src="https://cdn.trailrunnermag.com/wp-content/uploads/2012/01/dean.jpg" alt="After transformation" class="after-img">
+                        <span class="transformation-label">5 Months Transformation</span>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    <div class="star-rating">★★★★½ <span class="rating-number">4.5</span></div>
+                    <h3>From Desk Job to Marathon Runner!</h3>
+                    <p class="achievement">Completed first marathon & improved stamina</p>
+                    <p class="testimonial-text">"I never thought I'd become a runner, but the Premium Wellness Journey changed everything. The structured training program and nutrition guidance helped me build endurance gradually. Now I'm inspiring others to chase their fitness dreams!"</p>
+                    <div class="client-info">
+                        <img src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?w=150&auto=format" alt="Gilbert Too" class="client-img">
+                        <div>
+                            <h4>Gilbert Too</h4>
+                            <p>Premium Wellness Journey Member</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-images">
+                    <div class="before-after">
+                        <img src="https://i.pinimg.com/736x/bd/b3/c2/bdb3c290ea1bb4b080a197e02bcd8421.jpg" alt="Before transformation" class="before-img">
+                        <img src="https://cdn.shopify.com/s/files/1/0578/1097/files/Huel-Build-Muscle-Article.jpg?v=1637076813" alt="After transformation" class="after-img">
+                        <span class="transformation-label">3 Months Transformation</span>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    <div class="star-rating">★★★★★ <span class="rating-number">5.0</span></div>
+                    <h3>Strength & Mindfulness Journey!</h3>
+                    <p class="achievement">Gained strength & mastered mindful eating</p>
+                    <p class="testimonial-text">"The holistic approach to wellness here is unmatched! Not only did I achieve my physical goals, but I also learned the importance of mental wellness and mindful eating. Every day truly is a chance to improve your health with this amazing program."</p>
+                    <div class="client-info">
+                        <img src="https://media.istockphoto.com/id/1344781289/photo/profile-of-a-black-man-breathing-fresh-air-in-nature.jpg?s=612x612&w=0&k=20&c=dBVXPSitS1DUiMxGSZnYVQVUZJv7-Uf4Sy8VQxmEa_M=" alt="Enock Kurui" class="client-img">
+                        <div>
+                            <h4>Enock Kurui</h4>
+                            <p>Basic Wellness Package Member</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Shop by Category</h3>
+                <ul>
+                    <li><a href="#Workshops">Local Superfoods & Vegetables</a></li>
+                    <li><a href="#Workshops">Traditional Supplements & Herbs</a></li>
+                    <li><a href="#Workshops">Traditional Grains & Proteins</a></li>
+                    <li><a href="#Workshops">Traditional Beverages</a></li>
+                    <li><a href="#wellness-coach">Wellness Coaching Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-column social-media">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="https://www.pinterest.com/wholeb0dywellness/" target="_blank" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="https://www.pinterest.com/wholeb0dywellness/" target="_blank" class="social-link"><i class="fab fa-tiktok"></i> TikTok</a>
+                    <a href="https://www.pinterest.com/wholeb0dywellness/" target="_blank" class="social-link"><i class="fab fa-youtube"></i> YouTube</a>
+                    <a href="https://www.pinterest.com/wholeb0dywellness/" target="_blank" class="social-link"><i class="fab fa-twitter"></i> Twitter</a>
+                    <a href="https://www.pinterest.com/wholeb0dywellness/" target="_blank" class="social-link"><i class="fab fa-pinterest"></i> Pinterest</a>
+                </div>
+            </div>
+            <div class="footer-column mission">
+                <h3>Our Mission</h3>
+                <p>Empowering lives through traditional African wellness wisdom, we're committed to bringing nature's finest nutrients to your doorstep. Our journey is about reconnecting you with authentic, sustainable health solutions that have nourished generations.</p>
+                <div class="newsletter-signup">
+                    <h4>Subscribe to Our Newsletter</h4>
+                    <form class="subscribe-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="subscribe-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Health and Wellness. All rights reserved.</p>
+        </div>
+        <div class="credits-section">
+            <p>Developed by: 
+                <a href="https://github.com/Biwott362" target="_blank">Sharon Biwott</a> • 
+                <a href="https://github.com/James-Gichuki2104" target="_blank">James Gichuki</a> • 
+                <a href="https://github.com/Tookip" target="_blank">Gilbert Too</a>
+            </p>
+        </div>
+    </footer>
+    <!-- Add Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .credits-section {
+            text-align: center;
+            padding: 15px 0;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .credits-section p {
+            color: #fff;
+            font-size: 0.9em;
+            margin: 0;
+        }
+
+        .credits-section a {
+            color: #6ABF4B;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .credits-section a:hover {
+            color: #2f940b;
+            text-decoration: underline;
+        }
+    </style>
+    <script src="script.js">
+        
+    </script>
+  
+</body>
+
+</html>

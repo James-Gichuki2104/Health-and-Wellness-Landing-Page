@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Health and Wellness</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .signup-container {
+            width: 90%;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 40px;
+            background: linear-gradient(to right, #FFFFFF, #6ABF4B);
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(106, 191, 75, 0.3);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .signup-container.fade-out {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .signup-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .signup-header h1 {
+            color: #355e3b;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-family: 'Noto Serif Display', serif;
+        }
+
+        .signup-header p {
+            color: #013220;
+            font-size: 1.1em;
+        }
+
+        .signup-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            color: #355e3b;
+            font-weight: 500;
+        }
+
+        .form-group input, .form-group select {
+            padding: 12px;
+            border: 2px solid rgba(106, 191, 75, 0.3);
+            border-radius: 8px;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            background-color: white;
+        }
+
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: #6ABF4B;
+            box-shadow: 0 0 10px rgba(106, 191, 75, 0.2);
+        }
+
+        .form-group select {
+            padding: 12px;
+            border: 2px solid rgba(106, 191, 75, 0.3);
+            border-radius: 8px;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            background-color: white;
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23355e3b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1em;
+        }
+
+        .form-group select:focus {
+            outline: none;
+            border-color: #6ABF4B;
+            box-shadow: 0 0 10px rgba(106, 191, 75, 0.2);
+        }
+
+        .form-group select option {
+            padding: 12px;
+            background-color: white;
+            color: #333;
+        }
+
+        .submit-btn {
+            background-color: rgb(66, 189, 66);
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(66, 189, 66, 0.2);
+        }
+
+        .submit-btn:hover {
+            background-color: #2f940b;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(47, 148, 11, 0.3);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #355e3b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #2f940b;
+        }
+
+        .error-message {
+            color: #dc3545;
+            font-size: 0.9em;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .phone-input-group {
+            position: relative;
+            display: flex;
+            align-items: center;
+            background: white;
+            border: 2px solid rgba(106, 191, 75, 0.3);
+            border-radius: 8px;
+            padding: 2px;
+        }
+
+        .country-select {
+            position: relative;
+            background: white;
+            border: none;
+            color: #333;
+            font-size: 0.9em;
+            cursor: pointer;
+            padding: 10px;
+            border-right: 1px solid rgba(106, 191, 75, 0.3);
+            min-width: 100px;
+        }
+
+        .country-select:focus {
+            outline: none;
+        }
+
+        .country-select option {
+            background: white;
+            color: #333;
+            padding: 10px;
+        }
+
+        .phone-input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            font-size: 1em;
+            color: #333;
+            background: white;
+        }
+
+        .phone-input:focus {
+            outline: none;
+        }
+
+        .phone-input::placeholder {
+            color: #999;
+        }
+
+        .phone-input-group:focus-within {
+            border-color: #6ABF4B;
+            box-shadow: 0 0 10px rgba(106, 191, 75, 0.2);
+        }
+
+        @media (max-width: 600px) {
+            .signup-container {
+                width: 95%;
+                padding: 20px;
+                margin: 20px auto;
+            }
+        }
+
+        .success-message {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            margin-top: 20px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .success-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .success-content h2 {
+            color: #355e3b;
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(106, 191, 75, 0.3);
+            border-top: 4px solid #6ABF4B;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <div class="signup-header">
+            <h1>Join Our Wellness Journey</h1>
+            <p>Start your path to a healthier, more vibrant life today!</p>
+        </div>
+        <form class="signup-form" id="signupForm">
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name">
+                <div class="error-message" id="fullnameError"></div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+                <div class="error-message" id="emailError"></div>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <div class="phone-input-group">
+                    <select class="country-select" id="country-code">
+                        <option value="+254" selected>🇰🇪 +254</option>
+                        <option value="+255">🇹🇿 +255</option>
+                        <option value="+256">🇺🇬 +256</option>
+                        <option value="+250">🇷🇼 +250</option>
+                        <option value="+27">🇿🇦 +27</option>
+                        <option value="+234">🇳🇬 +234</option>
+                        <option value="+233">🇬🇭 +233</option>
+                        <option value="+20">🇪🇬 +20</option>
+                        <option value="+1">🇺🇸 +1</option>
+                        <option value="+44">🇬🇧 +44</option>
+                        <option value="+33">🇫🇷 +33</option>
+                        <option value="+49">🇩🇪 +49</option>
+                        <option value="+39">🇮🇹 +39</option>
+                        <option value="+34">🇪🇸 +34</option>
+                        <option value="+31">🇳🇱 +31</option>
+                        <option value="+46">🇸🇪 +46</option>
+                        <option value="+47">🇳🇴 +47</option>
+                        <option value="+45">🇩🇰 +45</option>
+                        <option value="+358">🇫🇮 +358</option>
+                        <option value="+353">🇮🇪 +353</option>
+                        <option value="+351">🇵🇹 +351</option>
+                        <option value="+30">🇬🇷 +30</option>
+                        <option value="+43">🇦🇹 +43</option>
+                        <option value="+41">🇨🇭 +41</option>
+                        <option value="+32">🇧🇪 +32</option>
+                        <option value="+48">🇵🇱 +48</option>
+                        <option value="+36">🇭🇺 +36</option>
+                        <option value="+40">🇷🇴 +40</option>
+                        <option value="+420">🇨🇿 +420</option>
+                        <option value="+421">🇸🇰 +421</option>
+                        <option value="+386">🇸🇮 +386</option>
+                        <option value="+385">🇭🇷 +385</option>
+                        <option value="+382">🇲🇪 +382</option>
+                        <option value="+381">🇷🇸 +381</option>
+                        <option value="+389">🇲🇰 +389</option>
+                        <option value="+355">🇦🇱 +355</option>
+                        <option value="+359">🇧🇬 +359</option>
+                        <option value="+372">🇪🇪 +372</option>
+                        <option value="+371">🇱🇻 +371</option>
+                        <option value="+370">🇱🇹 +370</option>
+                        <option value="+375">🇧🇾 +375</option>
+                        <option value="+380">🇺🇦 +380</option>
+                        <option value="+373">🇲🇩 +373</option>
+                        <option value="+374">🇦🇲 +374</option>
+                        <option value="+995">🇬🇪 +995</option>
+                        <option value="+994">🇦🇿 +994</option>
+                        <option value="+7">🇷🇺 +7</option>
+                        <option value="+90">🇹🇷 +90</option>
+                        <option value="+92">🇵🇰 +92</option>
+                        <option value="+91">🇮🇳 +91</option>
+                        <option value="+86">🇨🇳 +86</option>
+                        <option value="+81">🇯🇵 +81</option>
+                        <option value="+82">🇰🇷 +82</option>
+                        <option value="+84">🇻🇳 +84</option>
+                        <option value="+66">🇹🇭 +66</option>
+                        <option value="+60">🇲🇾 +60</option>
+                        <option value="+62">🇮🇩 +62</option>
+                        <option value="+63">🇵🇭 +63</option>
+                        <option value="+65">🇸🇬 +65</option>
+                        <option value="+61">🇦🇺 +61</option>
+                        <option value="+64">🇳🇿 +64</option>
+                    </select>
+                    <input type="tel" id="phone" name="phone" class="phone-input" placeholder="7XX XXX XXX" required>
+                </div>
+                <div class="error-message" id="phoneError"></div>
+            </div>
+            <div class="form-group">
+                <label for="package">Select Your Wellness Package</label>
+                <select id="package" name="package" required>
+                    <option value="">Choose a package...</option>
+                    <option value="basic">Basic Wellness Package</option>
+                    <option value="premium">Premium Wellness Journey</option>
+                    <option value="family">Family Wellness Plan</option>
+                </select>
+                <div class="error-message" id="packageError"></div>
+            </div>
+            <button type="submit" class="submit-btn">Start Your Journey</button>
+        </form>
+        <a href="index.html" class="back-link">← Back to Home</a>
+    </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('fullname').value;
+            const email = document.getElementById('email').value;
+            const countryCode = document.getElementById('country-code').value;
+            const phone = document.getElementById('phone').value;
+            const package = document.getElementById('package').value;
+            
+            // Validate form
+            if (!name || !email || !phone || !package) {
+                const packageError = document.getElementById('packageError');
+                packageError.textContent = 'Please select a package to continue';
+                packageError.style.display = 'block';
+                return;
+            }
+            
+            // Show success message
+            const successMessage = document.createElement('div');
+            successMessage.className = 'success-message';
+            successMessage.innerHTML = `
+                <div class="success-content">
+                    <h2>Thank you for signing up! Your wellness journey starts now. Redirecting you to your personalized plan... 🚀</h2>
+                    <div class="loading-spinner"></div>
+                </div>
+            `;
+            
+            // Replace form with success message
+            this.style.display = 'none';
+            this.parentNode.insertBefore(successMessage, this);
+            
+            // Redirect based on package selection
+            setTimeout(() => {
+                switch(package) {
+                    case 'basic':
+                        window.location.href = 'basic.html';
+                        break;
+                    case 'premium':
+                        window.location.href = 'premium.html';
+                        break;
+                    case 'family':
+                        window.location.href = 'family.html';
+                        break;
+                }
+            }, 3000);
+        });
+
+        // Phone number validation
+        const phoneInput = document.getElementById('phone');
+        phoneInput.addEventListener('input', function(e) {
+            // Remove any non-digit characters
+            let value = this.value.replace(/\D/g, '');
+            
+            // Limit to 9 digits
+            if (value.length > 9) {
+                value = value.slice(0, 9);
+            }
+            
+            // Format the number with spaces
+            if (value.length > 0) {
+                value = value.match(new RegExp('.{1,3}', 'g')).join(' ');
+            }
+            
+            this.value = value;
+        });
+
+        // Set default package if coming from a specific package link
+        window.addEventListener('load', function() {
+            const packageParam = new URLSearchParams(window.location.search).get('package');
+            if (packageParam) {
+                document.getElementById('package').value = packageParam;
+            }
+        });
+    </script>
+</body>
+</html>

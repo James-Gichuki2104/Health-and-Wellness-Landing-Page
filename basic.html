@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Wellness Package - Health & Wellness</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .basic-hero {
+            width: 90%;
+            height: 70vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1600&auto=format') center/cover;
+            margin: 20px auto;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 40px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            font-family: 'Noto Serif Display', serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .package-overview {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(106, 191, 75, 0.1);
+        }
+
+        .package-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .package-header h2 {
+            color: #355e3b;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .package-price {
+            font-size: 1.8em;
+            color: #2f940b;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .package-description {
+            color: #666;
+            font-size: 1.2em;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .benefits-section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .benefit-card {
+            background: #f8f8f8;
+            padding: 30px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(106, 191, 75, 0.15);
+        }
+
+        .benefit-icon {
+            font-size: 2.5em;
+            color: #2f940b;
+        }
+
+        .benefit-content h3 {
+            color: #355e3b;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .benefit-content p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .testimonials-section {
+            background: linear-gradient(135deg, #4a90e2 0%, #2f940b 100%);
+            padding: 60px 20px;
+            margin: 40px auto;
+            border-radius: 25px;
+            max-width: 1200px;
+            color: white;
+        }
+
+        .testimonials-section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .testimonial-content {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .client-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #2f940b;
+            box-shadow: 0 2px 8px rgba(47, 148, 11, 0.2);
+        }
+
+        .client-details h4 {
+            margin: 0;
+            font-size: 1.1em;
+        }
+
+        .client-details p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 60px 20px;
+            background: #f8f8f8;
+            margin: 40px auto;
+            border-radius: 25px;
+            max-width: 800px;
+        }
+
+        .cta-section h2 {
+            color: #355e3b;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .start-journey-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #2f940b;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.2em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(47, 148, 11, 0.2);
+        }
+
+        .start-journey-btn:hover {
+            background: #247808;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(47, 148, 11, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .basic-hero {
+                height: 50vh;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5em;
+            }
+
+            .benefits-section {
+                grid-template-columns: 1fr;
+            }
+
+            .package-overview {
+                padding: 20px;
+                margin: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <nav id="nav-bar">
+            <div class="logo">
+                <span class="logo-symbol">🌿</span>
+                <span class="logo-text">Health & Wellness</span>
+            </div>
+            <ul>
+                <li><a href="#basic-hero" class="nav-link">Home</a></li>
+                <li><a href="#package-overview" class="nav-link">Programs</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="index.html#footer" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="basic-hero" class="basic-hero">
+        <div class="hero-content">
+            <h1>Your Journey to Wellness Starts Here!</h1>
+            <p>Transform your life with our comprehensive Basic Wellness Package, designed to help you achieve your health and fitness goals.</p>
+        </div>
+    </section>
+
+    <section id="package-overview" class="package-overview">
+        <div class="package-header">
+            <h2>Basic Wellness Package</h2>
+            <div class="package-price">KSh 5,000/month</div>
+            <p class="package-description">
+                Welcome to your Basic Wellness Package—the perfect foundation for your transformation! With personalized coaching, nutrition guidance, and structured workout routines, you're setting the stage for a stronger, healthier, and more vibrant you.
+            </p>
+        </div>
+
+        <div class="benefits-section">
+            <div class="benefit-card">
+                <div class="benefit-icon">🎯</div>
+                <div class="benefit-content">
+                    <h3>Weekly One-on-One Coaching</h3>
+                    <p>Personalized guidance tailored to your lifestyle and goals, helping you stay on track and motivated.</p>
+                </div>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🥗</div>
+                <div class="benefit-content">
+                    <h3>Personalized Meal Plan</h3>
+                    <p>Custom nutrition plans designed for balanced eating, ensuring you get the right nutrients for optimal health.</p>
+                </div>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">💪</div>
+                <div class="benefit-content">
+                    <h3>Basic Workout Routines</h3>
+                    <p>Effective exercise programs that build strength and endurance, suitable for your fitness level.</p>
+                </div>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">📊</div>
+                <div class="benefit-content">
+                    <h3>Monthly Progress Tracking</h3>
+                    <p>Regular assessments to monitor your success and adjust your program as needed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials-section">
+        <h2>Success Stories</h2>
+        <div class="testimonial-card">
+            <div class="testimonial-content">
+                "The Basic Wellness Package gave me the foundation I needed to start my fitness journey. The personalized coaching and meal plans were exactly what I needed to stay on track."
+            </div>
+            <div class="client-info">
+                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&auto=format" alt="James Gichuki" class="client-img">
+                <div class="client-details">
+                    <h4>James Gichuki</h4>
+                    <p>Basic Wellness Package Member</p>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <div class="testimonial-content">
+                "I was skeptical at first, but the structured approach and regular check-ins helped me achieve results I never thought possible. The meal plans were especially helpful!"
+            </div>
+            <div class="client-info">
+                <img src="https://media.istockphoto.com/id/1344781289/photo/profile-of-a-black-man-breathing-fresh-air-in-nature.jpg?s=612x612&w=0&k=20&c=dBVXPSitS1DUiMxGSZnYVQVUZJv7-Uf4Sy8VQxmEa_M=" alt="Enock Kurui" class="client-img">
+                <div class="client-details">
+                    <h4>Enock Kurui</h4>
+                    <p>Basic Wellness Package Member</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Ready to Start Your Journey?</h2>
+        <p>Join our community of wellness enthusiasts and begin your transformation today!</p>
+        <a href="signUp.html?package=basic" class="start-journey-btn">Start Your Journey</a>
+    </section>
+
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#package-overview" class="nav-link">Programs</a></li>
+                    <li><a href="#testimonials" class="nav-link">Success Stories</a></li>
+                </ul>
+            </div>
+            <div class="footer-column social-media">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="https://www.pinterest.com/wholeb0dywellness/" target="_blank" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="https://www.pinterest.com/wholeb0dywellness/" target="_blank" class="social-link"><i class="fab fa-facebook"></i> Facebook</a>
+                    <a href="https://www.pinterest.com/wholeb0dywellness/" target="_blank" class="social-link"><i class="fab fa-twitter"></i> Twitter</a>
+                </div>
+            </div>
+            <div class="footer-column mission">
+                <h3>Our Mission</h3>
+                <p>Empowering lives through personalized wellness solutions, we're committed to helping you create a healthier, happier future.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Health and Wellness. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="script.js"></script>
+</body>
+</html>
