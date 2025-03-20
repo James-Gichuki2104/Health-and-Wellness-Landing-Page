@@ -1524,27 +1524,22 @@ footer {
 
 /* Nutritional Insights Section Styles */
 .nutritional-insights {
-    width: 90%;
-    padding: 80px 40px;
-    background: linear-gradient(to right, #FFFFFF, #6ABF4B);
-    margin: 20px auto;
-    border-radius: 25px;
-    box-shadow: 0 10px 30px rgba(106, 191, 75, 0.3),
-                0 15px 45px rgba(53, 94, 59, 0.2);
+    padding: 40px 0;
+    background: #f9f9f9;
 }
 
 .nutrition-hero {
-    width: 100%;
+    width: 90%;
     height: 60vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
                 url('https://images.unsplash.com/photo-1598009503747-f34d53b7df16?w=1600&auto=format') center/cover;
-    border-radius: 15px;
+    margin: 0 auto;
+    border-radius: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
-    margin-bottom: 40px;
 }
 
 .nutrition-hero .hero-content {
@@ -1794,11 +1789,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .nutritional-insights {
-        width: 95%;
-        padding: 40px 20px;
-    }
-
     .nutrition-hero {
         height: 50vh;
     }
