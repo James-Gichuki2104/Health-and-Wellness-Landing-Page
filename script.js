@@ -93,19 +93,68 @@ document.querySelectorAll('.product-item').forEach(item => {
     });
 });
 
-// Add form submission handlers
+// Form validation and redirection functionality
 document.addEventListener('DOMContentLoaded', function() {
-    // Signup form handler
-    const signupForm = document.querySelector('.signup-form');
+    const signupForm = document.getElementById('signupForm');
     if (signupForm) {
         signupForm.addEventListener('submit', function(event) {
             event.preventDefault();
             
-            // Show gratitude message
-            alert("Thank you for taking the first step towards your wellness journey! 🌟\n\nWe're grateful for the opportunity to be part of your transformation. Our team will reach out to you within 24 hours to begin your personalized wellness experience.\n\nWelcome to our wellness family! 💚");
-            
-            // Reset the form
-            signupForm.reset();
+            // Reset error messages
+            document.querySelectorAll('.error-message').forEach(error => {
+                error.style.display = 'none';
+                error.textContent = '';
+            });
+
+            // Get form values
+            const fullname = document.getElementById('fullname').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const package = document.getElementById('package').value;
+
+            // Validate form
+            let isValid = true;
+
+            if (!fullname) {
+                showError('fullnameError', 'Please enter your full name');
+                isValid = false;
+            }
+
+            if (!email) {
+                showError('emailError', 'Please enter your email address');
+                isValid = false;
+            } else if (!isValidEmail(email)) {
+                showError('emailError', 'Please enter a valid email address');
+                isValid = false;
+            }
+
+            if (!phone) {
+                showError('phoneError', 'Please enter your phone number');
+                isValid = false;
+            } else if (!isValidPhone(phone)) {
+                showError('phoneError', 'Please enter a valid phone number');
+                isValid = false;
+            }
+
+            if (!package) {
+                showError('packageError', 'Please select a wellness package');
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Show gratitude message
+                const gratitudeMessage = "Thank you for signing up! Your wellness journey starts now. Redirecting you to your personalized plan... 💚";
+                
+                // Add fade-out animation
+                const container = document.querySelector('.signup-container');
+                container.classList.add('fade-out');
+
+                // Show gratitude message and redirect after animation
+                setTimeout(() => {
+                    alert(gratitudeMessage);
+                    redirectToPackage(package);
+                }, 300);
+            }
         });
     }
 
@@ -123,3 +172,33 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Helper functions
+function showError(elementId, message) {
+    const errorElement = document.getElementById(elementId);
+    errorElement.textContent = message;
+    errorElement.style.display = 'block';
+}
+
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+function isValidPhone(phone) {
+    const phoneRegex = /^\+?[\d\s-]{10,}$/;
+    return phoneRegex.test(phone);
+}
+
+function redirectToPackage(package) {
+    const redirectMap = {
+        'basic': 'basic.html',
+        'premium': 'premium.html',
+        'family': 'family.html'
+    };
+
+    const redirectUrl = redirectMap[package];
+    if (redirectUrl) {
+        window.location.href = redirectUrl;
+    }
+}
